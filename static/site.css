@@ -1,0 +1,42 @@
+.page-name {
+  text-align: center 
+}
+
+.card-container > div {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px darkgray;
+}
+
+.card-container > div > h3 {
+  text-align: center;
+}
+
+.card-container img {
+  width: 100%;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1050px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 850px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
