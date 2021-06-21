@@ -9,13 +9,7 @@ xhr.addEventListener('load', ()=>{
 });
 
 
-/** @function displayForecast 
- * This function updates the div with id "card-container" on the 
- * page to display the forcast contained in the data argument.
- * @param {object} data - the forecast object from api.weather.gov 
- */
 function displayCards(data){
-  //var current = data.properties.periods[0];
   
   var display = document.getElementById("cardContainer");
   display.textContent = "";
