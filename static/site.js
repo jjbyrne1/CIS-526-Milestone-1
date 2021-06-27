@@ -1,4 +1,4 @@
-const path = "/project/static/box-locations.json";
+const path = "box-locations.json";
 
 const xhr = new XMLHttpRequest();
 xhr.open("GET", path);
@@ -22,10 +22,9 @@ function displayCards(data){
     desc.textContent = boxLocation.name;
     
     var img = document.createElement("img");
-    img.src = "https://open.mapquestapi.com/staticmap/v4/getmap?key=9V9esHFJ0JNWGiuIXVieiLhBHzseqFTD&size=600,400&zoom=16&center="
-         + boxLocation.lat + "," + boxLocation.lng;
+    img.src = "https://www.mapquestapi.com/staticmap/v5/map?key=9V9esHFJ0JNWGiuIXVieiLhBHzseqFTD&size=600,400&zoom=17&locations="
+         + boxLocation.lat + "," + boxLocation.lng + "&defaultMarker=marker-lg-3B5998-22407F&size=1100,500@2x";
     img.alt="img";
-    
     
     card.appendChild(desc);
     card.appendChild(img);
