@@ -14,6 +14,8 @@ function boxLocationDetails(req, res) {
   var box = db.prepare (`SELECT *
                          FROM boxes
                          WHERE id = ?;`).get(id);
+  
+  if (box == undefined) return res.writeHead(404).end();
 
   var boxRequests = db.prepare(`SELECT *
                                FROM requests
