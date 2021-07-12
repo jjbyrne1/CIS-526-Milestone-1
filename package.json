@@ -8,5 +8,11 @@
     "start": "node server.js"
   },
   "author": "",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "dependencies": {
+    "better-sqlite3": "^7.4.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "sanitize-html": "^2.4.0"
+  }
 }

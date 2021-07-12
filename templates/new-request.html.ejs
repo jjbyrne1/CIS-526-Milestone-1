@@ -1,0 +1,15 @@
+<div>
+  <h2>New Request</h2>
+  <form method="POST" action="/box-locations/<%= id %>/requests">
+    
+    <label>Request</label>
+    <textarea name="request" rows="10" required></textarea>
+    <br>
+    
+    <label>Fulfilled</label>
+    <input type="checkbox" name="fulfilled" checked="false"/>
+    <br>
+
+    <input type="submit" value="Post"/>
+  </form>
+</div>
