@@ -2,11 +2,19 @@ const db = require('../database');
 const templates = require('../templates');
 const sanitizeHTML = require('sanitize-html');
 const serveError = require('../serve-error');
+const parseCookie = require('../parse-cookie');
 
 /** @function createRequests()
  * Creates a new request using the supplied form data
  */
 function createRequests(req, res) {
+  
+  var cookie;
+  if (req.header.cookie) {
+    cookie = parseCookie(req.header.cookie);
+    console.log(cookie);
+  }
+  
   
   // Get the request data from the form
   const id = parseInt(req.params.id, 10);

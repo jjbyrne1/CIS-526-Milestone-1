@@ -1,20 +1,19 @@
-<nav>
-  <h2>Requests</h2>
+<nav style="outline:0.01em solid black; padding: 20px;">
+  <h2 style="text-align: center;">Requests</h2>
   <ul>
   <% requests.forEach((request) => { %>
-    <li>
-      <label> ID: <%= request.id %> </label>
+    <div style="outline:0.01em solid black; padding: 20px;">
+      <label style="max-width: 300px; word-wrap: break-word"> <%= request.request %> </label>
       <br>
-      <label> Content: <%= request.request %> </label>
-      <br>
-      <label> Fulfilled: 
+      <label > Status: 
         <% if (request.fulfilled == 1) { %> 
-          Yes
+          Fulfilled
         <% } else {%>
-          No
+          Unfulfilled
         <% } %>
       </label>
-    </li>
+    </div>
+    
   <% }); %>
   </ul>
 </nav>

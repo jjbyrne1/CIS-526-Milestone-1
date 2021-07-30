@@ -1,0 +1,27 @@
+<div>
+  <h1>Sign Up</h1>
+  <form method="POST">
+
+    <div class="error-message">
+      <%= errorMessage %>
+    </div>
+    
+    <label for="email">Email:</label>
+    <input type="text" name="email" />
+    <br>
+    <label for="firstname">Firstname:</label>
+    <input type="text" name="firstname" />
+    <br>
+    <label for="lastname">Lastname:</label>
+    <input type="text" name="lastname" />
+    <br>
+    <label for="passsword">Password:</label>
+    <input type="password" name="password"/>
+    <br>
+    <label for="passwordConfirmation">Password Confirmation:</label>
+    <input type="password" name="passwordConfirmation"/>
+    <br>
+    <input type="submit" value="Create Account"/>
+
+  </form>
+</div>

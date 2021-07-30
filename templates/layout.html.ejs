@@ -1,17 +1,40 @@
 <!doctype HTML>
 <html>
   <head>
-    <title>Box Location <%= id %></title>
+    <title> <% title %> </title>
   </head>
   <body>
-    <div>
-      <%- box %>  
-    </div>
-    <div>
-      <%- list %>
-    </div>
-    <div>
-      <%- request %>  
-    </div>
+    <% if (form == null) { %>
+      <% if (loggedin == 0) { %>
+        <div>
+          <a href="/signin">
+            Login
+          </a>
+        </div>
+        <div style="width: 49.5%;">
+          <%- box %>  
+        </div>
+        <div style="position: absolute; right: 5px; top: 5px; width: 49.5%;">
+          <%- list %>
+        </div>
+      <% } else { %>
+        <div>
+          <a href="/signout"> Signout </a>
+        </div>
+        <div style="width: 49.5%;">
+          <%- box %>  
+        </div>
+        <div style="position: absolute; right: 5px; top: 5px; width: 49.5%;">
+          <%- list %>
+        </div>
+        <div style="position: absolute; width: 20%;">
+          <%- request %>  
+        </div>
+      <% } %>
+      
+      
+    <% } else { %>
+      <%- form %>
+    <% } %>
   </body>
 </html>
